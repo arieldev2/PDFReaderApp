@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UICollectionViewDiffableDataSource<NSString *, PDFModel *> *dataSource;
+@property (strong, nonatomic) PDFEmptyUIView *emptyView;
 @property (strong, nonatomic) NSArray<PDFModel *> *documents;
 @property (strong, nonatomic) NSArray<PDFModel *> *filterdDocuments;
 
@@ -30,6 +31,7 @@ bool isSearching = FALSE;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"square.and.arrow.down"] style:UIBarButtonItemStyleDone target:self action:@selector(importDocument:)];
     [self configureViewModel];
     [self configureSearchController];
+    [self configureEmptyView];
     [self configureCollection];
     [self configureDataSource];
 }
@@ -59,6 +61,12 @@ bool isSearching = FALSE;
     self.navigationItem.searchController = searchController;
 }
 
+- (void)configureEmptyView{
+    _emptyView = [[PDFEmptyUIView alloc] init];
+    [self.view addSubview:_emptyView];
+    _emptyView.frame = self.view.bounds;
+    [_emptyView setHidden:TRUE];
+}
 
 - (void)configureCollection{
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[self createFlowLayout]];
@@ -135,7 +143,22 @@ bool isSearching = FALSE;
 
 - (void)getDocuments:(NSArray<PDFModel *> *)documents{
     _documents = documents;
+    [self checkEmptyPDF];
     [self updateSnapshot: _documents];
+}
+
+- (void)checkEmptyPDF{
+    if(_documents.count > 0){
+        if(_collectionView.isHidden){
+            [_collectionView setHidden:FALSE];
+            [_emptyView setHidden:TRUE];
+        }
+    }else{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView setHidden:TRUE];
+            [self.emptyView setHidden:FALSE];
+        });
+    }
 }
 
 

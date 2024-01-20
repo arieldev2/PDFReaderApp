@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2CB7602B5C77A900C31DA8 /* PDFEmptyUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CB75F2B5C77A900C31DA8 /* PDFEmptyUIView.m */; };
 		5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C412B5B402600FB20F9 /* AppDelegate.m */; };
 		5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C442B5B402600FB20F9 /* SceneDelegate.m */; };
 		5BC58C482B5B402600FB20F9 /* PDFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C472B5B402600FB20F9 /* PDFHomeViewController.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B2CB75E2B5C77A900C31DA8 /* PDFEmptyUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFEmptyUIView.h; sourceTree = "<group>"; };
+		5B2CB75F2B5C77A900C31DA8 /* PDFEmptyUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFEmptyUIView.m; sourceTree = "<group>"; };
 		5BC58C3D2B5B402600FB20F9 /* PDFReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC58C402B5B402600FB20F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BC58C412B5B402600FB20F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				5BC58C672B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m */,
 				5BCB24192B5B842E00D701CB /* PDFPageIndicatorUIView.h */,
 				5BCB241A2B5B842E00D701CB /* PDFPageIndicatorUIView.m */,
+				5B2CB75E2B5C77A900C31DA8 /* PDFEmptyUIView.h */,
+				5B2CB75F2B5C77A900C31DA8 /* PDFEmptyUIView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				5BC58C652B5B446C00FB20F9 /* PDFViewModel.m in Sources */,
 				5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */,
 				5BC58C622B5B444B00FB20F9 /* PDFViewerViewController.m in Sources */,
+				5B2CB7602B5C77A900C31DA8 /* PDFEmptyUIView.m in Sources */,
 				5BC58C532B5B402900FB20F9 /* main.m in Sources */,
 				5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */,
 			);

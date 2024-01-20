@@ -12,6 +12,7 @@
 #import "PDFViewModel.h"
 #import "PDFViewerViewController.h"
 #import "PDFDocumentCollectionViewCell.h"
+#import "PDFEmptyUIView.h"
 @class PDFModel;
 
 
