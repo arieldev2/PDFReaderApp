@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDFHomeViewController.h"
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 

@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C412B5B402600FB20F9 /* AppDelegate.m */; };
 		5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C442B5B402600FB20F9 /* SceneDelegate.m */; };
-		5BC58C482B5B402600FB20F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C472B5B402600FB20F9 /* ViewController.m */; };
-		5BC58C4B2B5B402600FB20F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC58C492B5B402600FB20F9 /* Main.storyboard */; };
+		5BC58C482B5B402600FB20F9 /* PDFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C472B5B402600FB20F9 /* PDFHomeViewController.m */; };
 		5BC58C4D2B5B402900FB20F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC58C4C2B5B402900FB20F9 /* Assets.xcassets */; };
 		5BC58C502B5B402900FB20F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC58C4E2B5B402900FB20F9 /* LaunchScreen.storyboard */; };
 		5BC58C532B5B402900FB20F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C522B5B402900FB20F9 /* main.m */; };
+		5BC58C5E2B5B40D600FB20F9 /* PDFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C5D2B5B40D600FB20F9 /* PDFModel.m */; };
+		5BC58C622B5B444B00FB20F9 /* PDFViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C612B5B444B00FB20F9 /* PDFViewerViewController.m */; };
+		5BC58C652B5B446C00FB20F9 /* PDFViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C642B5B446C00FB20F9 /* PDFViewModel.m */; };
+		5BC58C682B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C672B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m */; };
+		5BCB241B2B5B842E00D701CB /* PDFPageIndicatorUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB241A2B5B842E00D701CB /* PDFPageIndicatorUIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +26,22 @@
 		5BC58C412B5B402600FB20F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BC58C432B5B402600FB20F9 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5BC58C442B5B402600FB20F9 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5BC58C462B5B402600FB20F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BC58C472B5B402600FB20F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5BC58C4A2B5B402600FB20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BC58C462B5B402600FB20F9 /* PDFHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFHomeViewController.h; sourceTree = "<group>"; };
+		5BC58C472B5B402600FB20F9 /* PDFHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFHomeViewController.m; sourceTree = "<group>"; };
 		5BC58C4C2B5B402900FB20F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC58C4F2B5B402900FB20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC58C512B5B402900FB20F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC58C522B5B402900FB20F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BC58C5C2B5B40D600FB20F9 /* PDFModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFModel.h; sourceTree = "<group>"; };
+		5BC58C5D2B5B40D600FB20F9 /* PDFModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFModel.m; sourceTree = "<group>"; };
+		5BC58C602B5B444B00FB20F9 /* PDFViewerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFViewerViewController.h; sourceTree = "<group>"; };
+		5BC58C612B5B444B00FB20F9 /* PDFViewerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFViewerViewController.m; sourceTree = "<group>"; };
+		5BC58C632B5B446C00FB20F9 /* PDFViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFViewModel.h; sourceTree = "<group>"; };
+		5BC58C642B5B446C00FB20F9 /* PDFViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFViewModel.m; sourceTree = "<group>"; };
+		5BC58C662B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFDocumentCollectionViewCell.h; sourceTree = "<group>"; };
+		5BC58C672B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFDocumentCollectionViewCell.m; sourceTree = "<group>"; };
+		5BCB24192B5B842E00D701CB /* PDFPageIndicatorUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFPageIndicatorUIView.h; sourceTree = "<group>"; };
+		5BCB241A2B5B842E00D701CB /* PDFPageIndicatorUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFPageIndicatorUIView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +74,60 @@
 		5BC58C3F2B5B402600FB20F9 /* PDFReader */ = {
 			isa = PBXGroup;
 			children = (
+				5BC58C5F2B5B43F500FB20F9 /* Controllers */,
+				5BC58C5B2B5B40C200FB20F9 /* Model */,
+				5BC58C5A2B5B403D00FB20F9 /* View */,
+				5BC58C592B5B403300FB20F9 /* ViewModel */,
 				5BC58C402B5B402600FB20F9 /* AppDelegate.h */,
 				5BC58C412B5B402600FB20F9 /* AppDelegate.m */,
 				5BC58C432B5B402600FB20F9 /* SceneDelegate.h */,
 				5BC58C442B5B402600FB20F9 /* SceneDelegate.m */,
-				5BC58C462B5B402600FB20F9 /* ViewController.h */,
-				5BC58C472B5B402600FB20F9 /* ViewController.m */,
-				5BC58C492B5B402600FB20F9 /* Main.storyboard */,
 				5BC58C4C2B5B402900FB20F9 /* Assets.xcassets */,
 				5BC58C4E2B5B402900FB20F9 /* LaunchScreen.storyboard */,
 				5BC58C512B5B402900FB20F9 /* Info.plist */,
 				5BC58C522B5B402900FB20F9 /* main.m */,
 			);
 			path = PDFReader;
+			sourceTree = "<group>";
+		};
+		5BC58C592B5B403300FB20F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5BC58C632B5B446C00FB20F9 /* PDFViewModel.h */,
+				5BC58C642B5B446C00FB20F9 /* PDFViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5BC58C5A2B5B403D00FB20F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BC58C662B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.h */,
+				5BC58C672B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m */,
+				5BCB24192B5B842E00D701CB /* PDFPageIndicatorUIView.h */,
+				5BCB241A2B5B842E00D701CB /* PDFPageIndicatorUIView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC58C5B2B5B40C200FB20F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BC58C5C2B5B40D600FB20F9 /* PDFModel.h */,
+				5BC58C5D2B5B40D600FB20F9 /* PDFModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC58C5F2B5B43F500FB20F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BC58C462B5B402600FB20F9 /* PDFHomeViewController.h */,
+				5BC58C472B5B402600FB20F9 /* PDFHomeViewController.m */,
+				5BC58C602B5B444B00FB20F9 /* PDFViewerViewController.h */,
+				5BC58C612B5B444B00FB20F9 /* PDFViewerViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +189,6 @@
 			files = (
 				5BC58C502B5B402900FB20F9 /* LaunchScreen.storyboard in Resources */,
 				5BC58C4D2B5B402900FB20F9 /* Assets.xcassets in Resources */,
-				5BC58C4B2B5B402600FB20F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC58C482B5B402600FB20F9 /* ViewController.m in Sources */,
+				5BCB241B2B5B842E00D701CB /* PDFPageIndicatorUIView.m in Sources */,
+				5BC58C482B5B402600FB20F9 /* PDFHomeViewController.m in Sources */,
+				5BC58C5E2B5B40D600FB20F9 /* PDFModel.m in Sources */,
+				5BC58C682B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m in Sources */,
+				5BC58C652B5B446C00FB20F9 /* PDFViewModel.m in Sources */,
 				5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */,
+				5BC58C622B5B444B00FB20F9 /* PDFViewerViewController.m in Sources */,
 				5BC58C532B5B402900FB20F9 /* main.m in Sources */,
 				5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */,
 			);
@@ -156,14 +214,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BC58C492B5B402600FB20F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BC58C4A2B5B402600FB20F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BC58C4E2B5B402900FB20F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,12 +348,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QP85979J3B;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,8 +362,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = c.PDFReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,12 +377,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QP85979J3B;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PDFReader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,8 +391,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = c.PDFReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
