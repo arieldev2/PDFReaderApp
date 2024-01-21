@@ -46,8 +46,9 @@ bool isSearching = FALSE;
 
 - (void)importDocument:(id)sender {
     NSArray<UTType *> *allowedUTIs = @[UTTypePDF];
-    UIDocumentPickerViewController *documentPicker = [[UIDocumentPickerViewController alloc] initForOpeningContentTypes:allowedUTIs asCopy:TRUE];
+    UIDocumentPickerViewController *documentPicker = [[UIDocumentPickerViewController alloc] initForOpeningContentTypes:allowedUTIs asCopy:FALSE];
     documentPicker.delegate = self;
+    documentPicker.allowsMultipleSelection = FALSE;
     documentPicker.modalPresentationStyle = UIModalPresentationAutomatic;
     [self presentViewController:documentPicker animated:TRUE completion:Nil];
 }
@@ -168,15 +169,15 @@ bool isSearching = FALSE;
     if(url == Nil){
         return;
     }
+    
+    BOOL isAccessGranted = [url startAccessingSecurityScopedResource];
     NSError *err;
     NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
-    [fileCoordinator coordinateReadingItemAtURL:url options:NSFileCoordinatorReadingForUploading error:&err byAccessor:^(NSURL *newURL) {
-
-        if([newURL startAccessingSecurityScopedResource] != TRUE){
-            return;
+    [fileCoordinator coordinateReadingItemAtURL:url options:NSFileCoordinatorReadingWithoutChanges error:&err byAccessor:^(NSURL *newURL) {
+                
+        if(isAccessGranted){
+            [_viewModel saveDocument:newURL];
         }
-        [_viewModel saveDocument:newURL];
-        
         [newURL stopAccessingSecurityScopedResource];
         }];
     
