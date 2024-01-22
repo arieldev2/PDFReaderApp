@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PDFModel.h"
+#import "PDFService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PDFViewModel : NSObject
+
+- (instancetype)initWithService:(id<PDFServiceProtocol>)service;
 
 - (void)getDocuments;
 - (void)saveDocument:(NSURL *)url;

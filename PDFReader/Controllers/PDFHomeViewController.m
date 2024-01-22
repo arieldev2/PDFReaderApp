@@ -39,7 +39,7 @@ bool isSearching = FALSE;
 - (void)configureViewModel{
     _documents = @[];
     _filterdDocuments = @[];
-    _viewModel = [[PDFViewModel alloc] init];
+    _viewModel = [[PDFViewModel alloc] initWithService:[PDFService sharedService]];
     _viewModel.delegate = self;
     [_viewModel getDocuments];
 }

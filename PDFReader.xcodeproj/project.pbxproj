@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0893172B5DEDAE00E62562 /* PDFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0893162B5DEDAE00E62562 /* PDFService.m */; };
+		5B08931B2B5DF16500E62562 /* PDFErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08931A2B5DF16500E62562 /* PDFErrors.m */; };
 		5B2CB7602B5C77A900C31DA8 /* PDFEmptyUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CB75F2B5C77A900C31DA8 /* PDFEmptyUIView.m */; };
 		5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C412B5B402600FB20F9 /* AppDelegate.m */; };
 		5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC58C442B5B402600FB20F9 /* SceneDelegate.m */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0893152B5DEDAE00E62562 /* PDFService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFService.h; sourceTree = "<group>"; };
+		5B0893162B5DEDAE00E62562 /* PDFService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFService.m; sourceTree = "<group>"; };
+		5B0893192B5DF16500E62562 /* PDFErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFErrors.h; sourceTree = "<group>"; };
+		5B08931A2B5DF16500E62562 /* PDFErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFErrors.m; sourceTree = "<group>"; };
 		5B2CB75E2B5C77A900C31DA8 /* PDFEmptyUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFEmptyUIView.h; sourceTree = "<group>"; };
 		5B2CB75F2B5C77A900C31DA8 /* PDFEmptyUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFEmptyUIView.m; sourceTree = "<group>"; };
 		5BC58C3D2B5B402600FB20F9 /* PDFReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +64,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0893142B5DED8E00E62562 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5B0893152B5DEDAE00E62562 /* PDFService.h */,
+				5B0893162B5DEDAE00E62562 /* PDFService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5B0893182B5DF14800E62562 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B0893192B5DF16500E62562 /* PDFErrors.h */,
+				5B08931A2B5DF16500E62562 /* PDFErrors.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BC58C342B5B402600FB20F9 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +101,8 @@
 		5BC58C3F2B5B402600FB20F9 /* PDFReader */ = {
 			isa = PBXGroup;
 			children = (
+				5B0893182B5DF14800E62562 /* Extensions */,
+				5B0893142B5DED8E00E62562 /* Service */,
 				5BC58C5F2B5B43F500FB20F9 /* Controllers */,
 				5BC58C5B2B5B40C200FB20F9 /* Model */,
 				5BC58C5A2B5B403D00FB20F9 /* View */,
@@ -205,12 +231,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCB241B2B5B842E00D701CB /* PDFPageIndicatorUIView.m in Sources */,
+				5B08931B2B5DF16500E62562 /* PDFErrors.m in Sources */,
 				5BC58C482B5B402600FB20F9 /* PDFHomeViewController.m in Sources */,
 				5BC58C5E2B5B40D600FB20F9 /* PDFModel.m in Sources */,
 				5BC58C682B5B448F00FB20F9 /* PDFDocumentCollectionViewCell.m in Sources */,
 				5BC58C652B5B446C00FB20F9 /* PDFViewModel.m in Sources */,
 				5BC58C422B5B402600FB20F9 /* AppDelegate.m in Sources */,
 				5BC58C622B5B444B00FB20F9 /* PDFViewerViewController.m in Sources */,
+				5B0893172B5DEDAE00E62562 /* PDFService.m in Sources */,
 				5B2CB7602B5C77A900C31DA8 /* PDFEmptyUIView.m in Sources */,
 				5BC58C532B5B402900FB20F9 /* main.m in Sources */,
 				5BC58C452B5B402600FB20F9 /* SceneDelegate.m in Sources */,

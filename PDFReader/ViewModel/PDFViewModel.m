@@ -7,68 +7,49 @@
 
 #import "PDFViewModel.h"
 
+@interface PDFViewModel ()
+
+@property (strong, nonatomic) id<PDFServiceProtocol> service;
+
+@end
+
 @implementation PDFViewModel
 
-- (void)getDocuments{
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *directoryPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectoryPath = [directoryPaths objectAtIndex:0];
-
-    @try {
-        NSError *err;
-        NSArray<NSString *> *filePaths = [fileManager contentsOfDirectoryAtPath:documentsDirectoryPath error:&err];
-        NSMutableArray<PDFModel *> * temp = [[NSMutableArray<PDFModel *> alloc] init];
-        for (NSString *path in filePaths) {
-            NSString *title = [path stringByDeletingPathExtension].lastPathComponent;
-            PDFModel *model = PDFModel.new;
-            model.id = [[NSUUID alloc] init];
-            model.title = title;
-            model.path = [NSString stringWithFormat:@"%@/%@", documentsDirectoryPath, path];
-            [temp addObject: model];
-        }
-        [_delegate getDocuments:temp];
-    } @catch (NSException *exception) {
-        NSLog(@"%@",exception);
+- (instancetype)initWithService:(id<PDFServiceProtocol>)service{
+    if(self == [super init]){
+        _service = service;
     }
+    return self;
+}
+
+
+- (void)getDocuments{
+    __typeof(self) __weak weakSelf = self;
+    [_service getDocuments:^(NSArray<PDFModel *> * _Nullable documents, NSError * _Nullable error) {
+        if(documents != Nil){
+            [weakSelf.delegate getDocuments:documents];
+        }
+    }];
+
 }
 
 - (void)saveDocument:(NSURL *)url{
-
-    NSString *title = [url URLByDeletingPathExtension].lastPathComponent;
-    NSString *ext = url.pathExtension;
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *directoryPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectoryPath = [directoryPaths objectAtIndex:0];
-    
-    NSString *destUrl = [[documentsDirectoryPath stringByAppendingPathComponent:title] stringByAppendingPathExtension:ext];
-    
-    @try {
-        NSError *err;
-        [fileManager copyItemAtPath:url.path toPath:destUrl error:&err];
-        if(err == nil){
-            [self getDocuments];
+    __typeof(self) __weak weakSelf = self;
+    [_service saveDocument:url success:^(NSError * _Nullable error) {
+        if(error == Nil){
+            [weakSelf getDocuments];
         }
-    } @catch (NSException *exception) {
-        NSLog(@"%@",exception);
-    }
+    }];
 }
 
 - (void)deleteDocument:(NSURL *)url{
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-    if([fileManager fileExistsAtPath:url.path] == TRUE){
-        @try {
-            NSError *err;
-            [fileManager removeItemAtPath:url.path error:&err];
-            if(err == nil){
-                [self getDocuments];
-            }
-        } @catch (NSException *exception) {
-            NSLog(@"%@",exception);
+    __typeof(self) __weak weakSelf = self;
+    [_service deleteDocument:url success:^(NSError * _Nullable error) {
+        if(error == Nil){
+            [weakSelf getDocuments];
         }
-    }
+    }];
+
 }
 
 @end
