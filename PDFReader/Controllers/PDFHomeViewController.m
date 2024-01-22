@@ -148,6 +148,18 @@ bool isSearching = FALSE;
     [self updateSnapshot: _documents];
 }
 
+- (void)saveDocument:(NSError *)error{
+    if(error == Nil){
+        [_viewModel getDocuments];
+    }
+}
+
+- (void)deleteDocument:(NSError *)error{
+    if(error == Nil){
+        [_viewModel getDocuments];
+    }
+}
+
 - (void)checkEmptyPDF{
     if(_documents.count > 0){
         if(_collectionView.isHidden){

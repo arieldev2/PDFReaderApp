@@ -1,5 +1,5 @@
 //
-//  PDFService.h
+//  PDFServiceProtocol.h
 //  PDFReader
 //
 //  Created by Ariel Ortiz on 1/21/24.
@@ -7,12 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "PDFModel.h"
-#import "PDFErrors.h"
-#import "PDFServiceProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PDFService : NSObject <PDFServiceProtocol>
+@protocol PDFServiceProtocol <NSObject>
 
 + (id)sharedService;
 

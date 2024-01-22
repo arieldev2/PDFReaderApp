@@ -36,18 +36,14 @@
 - (void)saveDocument:(NSURL *)url{
     __typeof(self) __weak weakSelf = self;
     [_service saveDocument:url success:^(NSError * _Nullable error) {
-        if(error == Nil){
-            [weakSelf getDocuments];
-        }
+        [weakSelf.delegate saveDocument:error];
     }];
 }
 
 - (void)deleteDocument:(NSURL *)url{
     __typeof(self) __weak weakSelf = self;
     [_service deleteDocument:url success:^(NSError * _Nullable error) {
-        if(error == Nil){
-            [weakSelf getDocuments];
-        }
+        [weakSelf.delegate deleteDocument:error];
     }];
 
 }

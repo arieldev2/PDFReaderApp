@@ -8,14 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "PDFModel.h"
 #import "PDFService.h"
+#import "PDFViewModelProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol PDFViewModelDelegate <NSObject>
-- (void)getDocuments:(NSArray<PDFModel *> *)documents;
-@end
 
-@interface PDFViewModel : NSObject
+@interface PDFViewModel : NSObject <PDFViewModelProtocol>
 
 - (instancetype)initWithService:(id<PDFServiceProtocol>)service;
 

@@ -1,18 +1,16 @@
 //
-//  PDFService.h
-//  PDFReader
+//  PDFServiceMock.h
+//  PDFReaderTests
 //
 //  Created by Ariel Ortiz on 1/21/24.
 //
 
 #import <Foundation/Foundation.h>
-#import "PDFModel.h"
-#import "PDFErrors.h"
 #import "PDFServiceProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PDFService : NSObject <PDFServiceProtocol>
+@interface PDFServiceMock : NSObject <PDFServiceProtocol>
 
 + (id)sharedService;
 

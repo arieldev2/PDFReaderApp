@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *path;
 
+- (instancetype)initWithID:(NSUUID *)id title:(NSString *)title path:(NSString *)path;
 
 @end
 
